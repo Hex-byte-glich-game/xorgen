@@ -1,0 +1,112 @@
+/* General body styles */
+body {
+  background-color: #000; /* Black background */
+  color: #0f0; /* Neon green text */
+  font-family: 'Courier New', Courier, monospace; /* Monospaced font */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Form container styles */
+#xor-pre-form {
+  width: 80%;
+  max-width: 600px;
+  border: 1px solid #0f0;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8); /* Transparent black background */
+  box-shadow: 0 0 20px #0f0;
+  border-radius: 10px;
+}
+
+/* Input and button styles */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+input, textarea, button {
+  background: #000;
+  color: #0f0;
+  border: 1px solid #0f0;
+  font-family: inherit;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input:focus, textarea:focus, button:focus {
+  outline: none;
+  box-shadow: 0 0 10px #0f0;
+}
+
+button:hover {
+  background: #0f0;
+  color: #000;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Animated background effect */
+.animated-background {
+  background: linear-gradient(90deg, #000 25%, #111 50%, #000 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+      background-position: -200% 0;
+  }
+  100% {
+      background-position: 200% 0;
+  }
+}
+
+/* Textarea styles */
+textarea {
+  resize: none;
+  height: 150px;
+}
+
+/* Add a blinking cursor effect to text fields */
+input::placeholder, textarea::placeholder {
+  color: #0f0;
+  opacity: 0.8;
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+      opacity: 0.4;
+  }
+}
+#xor-footer {
+  background: #000;
+  color: #0f0;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid #0f0;
+  box-shadow: 0 -5px 10px #0f0;
+  position: fixed; /* Sticks to the bottom of the screen */
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+#xor-footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+#hacker-motto {
+  color: #00ff99; /* Slightly different neon green for emphasis */
+  font-style: italic;
+}
